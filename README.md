@@ -1,5 +1,5 @@
 ## Hello, World!
-- I am Argentinian
+- I am from Argentina
 - I use C, C#, and Python
 - I am currently learning Game Development
 
