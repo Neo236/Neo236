@@ -1,0 +1,33 @@
+name: generar snake aguará
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generar snake con paleta aguará
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Neo236
+          outputs: |
+            dist/snake-dark.svg?color_snake=#E8722E&color_dots=#241C15,#4A3423,#8A5A26,#C88A2E,#D9A441
+            dist/snake-light.svg?color_snake=#BC531D&color_dots=#EFE6D8,#E4C98F,#D9A441,#C87A2E,#A85014
+
+      - name: Publicar en la rama output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
