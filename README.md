@@ -47,17 +47,18 @@
 
 </div>
 
-<!-- Seccion Spotify: descomentar cuando el endpoint este deployado (reemplazar TU-SPOTIFY-APP)
 ## 🎧 Sonando en la madriguera
 
 <div align="center">
 
-<a href="https://open.spotify.com">
-  <img src="https://TU-SPOTIFY-APP/api/spotify?background_color=15100C&border_color=3A2A1E" alt="Escuchando ahora en Spotify">
+<a href="https://open.spotify.com/user/fkvhs82vpwh1b8th0z8i80g0g">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=dark">
+    <img alt="Escuchando ahora en Spotify" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=light">
+  </picture>
 </a>
 
 </div>
--->
 
 ## 🐍 El aguará cruza el pastizal
 
