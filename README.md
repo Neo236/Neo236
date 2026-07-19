@@ -20,10 +20,10 @@
 ## 🌅 Ahora
 
 <!--NOW:START-->
-- 🔨 Construyendo **StackQuest**: foro full-stack con gamificación retro-gaming (Spring Boot + React + MySQL)
-- 🛒 Dándole forma al e-commerce **Hermanos Jota**
+- 🏆 Participando del **Hackathon ONE G9 – LATAM** con el proyecto **Energi AI**
 - 🎓 Cursando **Oracle Next Education** (Alura Latam)
-- 🎮 Cuando baja el sol: desarrollo de juegos
+- 🏢 Landing page y sistema de gerencia para **UNIX Soluciones**
+- 🎮 Cuando baja el sol: sistemas de juegos
 <!--NOW:END-->
 
 ## 📊 Huellas en el pastizal
