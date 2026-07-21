@@ -17,7 +17,7 @@
 
 </div>
 
-## Ahora
+### Ahora
 
 <!--NOW:START-->
 - **Hackathon ONE G9 – LATAM** — construyendo *Energi AI*
@@ -26,7 +26,7 @@
 - Sistemas de juegos cuando baja el sol
 <!--NOW:END-->
 
-## Huellas en el pastizal
+### Huellas en el pastizal
 
 <div align="center">
 <picture>
@@ -55,7 +55,7 @@
 </a>
 </div>
 
-## El aguará cruza el pastizal
+### El aguará cruza el pastizal
 
 <div align="center">
 
