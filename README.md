@@ -51,8 +51,8 @@ Desarrollador **fullstack** del Gran Chaco — y, como él, rindo mejor cuando c
 </picture>
 <a href="https://open.spotify.com/user/fkvhs82vpwh1b8th0z8i80g0g">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=dark">
-  <img alt="Escuchando ahora en Spotify" width="380" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=light">
+  <source media="(prefers-color-scheme: dark)" srcset="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&show_offline=true&mode=dark">
+  <img alt="Escuchando ahora en Spotify" width="380" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&show_offline=true&mode=light">
 </picture>
 </a>
 </div>
