@@ -24,6 +24,21 @@ jobs:
             dist/snake-dark.svg?color_snake=#E8722E&color_dots=#241C15,#4A3423,#8A5A26,#C88A2E,#D9A441
             dist/snake-light.svg?color_snake=#BC531D&color_dots=#EFE6D8,#E4C98F,#D9A441,#C87A2E,#A85014
 
+      - name: Pintar crin y cola del aguará (snake multicolor)
+        run: |
+          # s0=cabeza (rufo), s1=segundo bloque (crin oscura),
+          # s2=cuerpo (rufo), s3=punta de la cola (blanca)
+          # contorno rufo para que crin y cola se vean en ambos temas
+          inject () {
+            css="<style>.s.s1{fill:#15100C;stroke:$2;stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:$2;stroke-width:1px}</style>"
+            sed -i "s|</svg>|${css}</svg>|" "$1"
+          }
+          inject dist/snake-dark.svg  "#E8722E"
+          inject dist/snake-light.svg "#BC531D"
+          echo "== verificacion dark =="
+          grep -o "s\.s1{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s1"
+          grep -o "s\.s3{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s3"
+
       - name: Publicar en la rama output
         uses: crazy-max/ghaction-github-pages@v4
         with:
