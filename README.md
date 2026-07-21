@@ -2,8 +2,8 @@
 
 <!-- ============ HEADER: typing SVG adaptativo ============ -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3500&pause=900&color=E8722E&center=true&vCenter=true&width=520&height=60&lines=Hola%2C+soy+Lautaro+%2F+Neo236;Backend+dev+en+entrenamiento;Java+%C2%B7+Spring+Boot+%C2%B7+Python;Aguar%C3%A1+guaz%C3%BA+del+repositorio">
-  <img alt="Hola, soy Lautaro / Neo236" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3500&pause=900&color=BC531D&center=true&vCenter=true&width=520&height=60&lines=Hola%2C+soy+Lautaro+%2F+Neo236;Backend+dev+en+entrenamiento;Java+%C2%B7+Spring+Boot+%C2%B7+Python;Aguar%C3%A1+guaz%C3%BA+del+repositorio">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3500&pause=900&color=E8722E&center=true&vCenter=true&width=540&height=60&lines=Hola%2C+Lautaro%2FNeo236+ac%C3%A1;Fullstack+dev+desde+el+Chaco;while%28true%29+%7B+aprender%28%29%3B+%7D;Cazando+bugs+en+el+pastizal;Ladrido+ronco%2C+c%C3%B3digo+limpio;git+commit+-m+%22zancada%22;Aguar%C3%A1+guaz%C3%BA+entre+los+repos">
+  <img alt="Hola, Lautaro/Neo236 acá" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3500&pause=900&color=BC531D&center=true&vCenter=true&width=540&height=60&lines=Hola%2C+Lautaro%2FNeo236+ac%C3%A1;Fullstack+dev+desde+el+Chaco;while%28true%29+%7B+aprender%28%29%3B+%7D;Cazando+bugs+en+el+pastizal;Ladrido+ronco%2C+c%C3%B3digo+limpio;git+commit+-m+%22zancada%22;Aguar%C3%A1+guaz%C3%BA+entre+los+repos">
 </picture>
 
 🐾 *Zancadas largas por el pastizal del código, desde Chaco, Argentina* 🐾
@@ -17,50 +17,45 @@
 
 </div>
 
-## 🌅 Ahora
+## Ahora
 
 <!--NOW:START-->
-- 🏆 Participando del **Hackathon ONE G9 – LATAM** con el proyecto **Energi AI**
-- 🎓 Cursando **Oracle Next Education** (Alura Latam)
-- 🏢 Landing page y sistema de gerencia para **UNIX Soluciones**
-- 🎮 Cuando baja el sol: sistemas de juegos
+- **Hackathon ONE G9 – LATAM** — construyendo *Energi AI*
+- **Oracle Next Education** (Alura Latam)
+- Landing + sistema de gerencia para **UNIX Soluciones**
+- Sistemas de juegos cuando baja el sol
 <!--NOW:END-->
 
-## 📊 Huellas en el pastizal
+## Huellas en el pastizal
 
 <div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&hide_border=false&include_all_commits=true">
-  <img alt="Stats de GitHub" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&hide_border=false&include_all_commits=true">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&hide_border=false&include_all_commits=true&card_width=460">
+  <img alt="Estadísticas de GitHub" width="460" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&hide_border=false&include_all_commits=true&card_width=460">
 </picture>
-
+</div>
+<div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&hide_border=false&langs_count=8">
-  <img alt="Lenguajes más usados" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&hide_border=false&langs_count=8">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&hide_border=false&langs_count=8&card_width=460">
+  <img alt="Lenguajes más usados" width="460" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&hide_border=false&langs_count=8&card_width=460">
 </picture>
-
+</div>
+<div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Neo236&background=15100C&border=3A2A1E&ring=E8722E&fire=D9A441&currStreakNum=EFE6D8&sideNums=EFE6D8&currStreakLabel=E8722E&sideLabels=D9A441&dates=8A7A66&hide_border=false">
-  <img alt="Racha de contribuciones" src="https://streak-stats.demolab.com?user=Neo236&background=F7F0E3&border=E0D3BC&ring=BC531D&fire=A17C24&currStreakNum=33261C&sideNums=33261C&currStreakLabel=BC531D&sideLabels=A17C24&dates=8A7A66&hide_border=false">
+  <img alt="Racha de contribuciones" width="460" src="https://streak-stats.demolab.com?user=Neo236&background=F7F0E3&border=E0D3BC&ring=BC531D&fire=A17C24&currStreakNum=33261C&sideNums=33261C&currStreakLabel=BC531D&sideLabels=A17C24&dates=8A7A66&hide_border=false">
 </picture>
-
 </div>
-
-## 🎧 Sonando en la madriguera
-
 <div align="center">
-
 <a href="https://open.spotify.com/user/fkvhs82vpwh1b8th0z8i80g0g">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=dark">
-    <img alt="Escuchando ahora en Spotify" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=light">
-  </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=dark">
+  <img alt="Escuchando ahora en Spotify" width="460" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&mode=light">
+</picture>
 </a>
-
 </div>
 
-## 🐍 El aguará cruza el pastizal
+## El aguará cruza el pastizal
 
 <div align="center">
 
@@ -71,10 +66,8 @@
 
 </div>
 
----
-
 <div align="center">
 
-🌅 *Animal crepuscular: más commits al atardecer* 🌅
+*Animal crepuscular: más commits al atardecer*
 
 </div>
