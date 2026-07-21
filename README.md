@@ -10,18 +10,13 @@
 
 <div align="center">
 
-El **aguará guazú** (*Chrysocyon brachyurus*, «zorro grande» en guaraní) es el cánido más grande de Sudamérica. No es lobo ni zorro: es la única especie de su género, de patas largas y oscuras, pelaje rojizo y una crin eréctil sobre el lomo. Solitario y de hábitos crepusculares, recorre pastizales, sabanas y esteros del Gran Chaco alimentándose de pequeños animales y frutos. Hoy figura como especie **casi amenazada** por la pérdida de su hábitat.
+*"El **aguará guazú** (Chrysocyon brachyurus, «zorro grande» en guaraní) es el cánido más grande de Sudamérica. No es lobo ni zorro: es la única especie de su género, de patas largas y oscuras, pelaje rojizo y una crin eréctil sobre el lomo. Solitario y de hábitos crepusculares, recorre pastizales, sabanas y esteros del Gran Chaco alimentándose de pequeños animales y frutos. Hoy figura como especie casi amenazada por la pérdida de su hábitat."*
 
-<sub>*Fuente: [Wikipedia — Chrysocyon brachyurus](https://es.wikipedia.org/wiki/Chrysocyon_brachyurus)*</sub>
+</div>
 
-<br>
+<div align="right">
 
-<img src="https://img.shields.io/badge/Java-15100C?style=for-the-badge&logo=openjdk&logoColor=EFE6D8" alt="Java">
-<img src="https://img.shields.io/badge/Spring_Boot-15100C?style=for-the-badge&logo=springboot&logoColor=EFE6D8" alt="Spring Boot">
-<img src="https://img.shields.io/badge/Python-15100C?style=for-the-badge&logo=python&logoColor=EFE6D8" alt="Python">
-<img src="https://img.shields.io/badge/JavaScript-15100C?style=for-the-badge&logo=javascript&logoColor=EFE6D8" alt="JavaScript">
-<img src="https://img.shields.io/badge/C%23-15100C?style=for-the-badge&logo=dotnet&logoColor=EFE6D8" alt="C#">
-<img src="https://img.shields.io/badge/Dart-15100C?style=for-the-badge&logo=dart&logoColor=EFE6D8" alt="Dart">
+<sub>*— [Wikipedia](https://es.wikipedia.org/wiki/Chrysocyon_brachyurus)*</sub>
 
 </div>
 
@@ -61,10 +56,6 @@ El **aguará guazú** (*Chrysocyon brachyurus*, «zorro grande» en guaraní) es
   <img alt="Escuchando ahora en Spotify" width="380" src="https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&show_offline=true&mode=light">
 </picture>
 </a>
-</div>
-
-<div align="center">
-<img src="https://img.shields.io/badge/El_aguar%C3%A1_cruza_el_pastizal-15100C?style=for-the-badge&labelColor=15100C&color=E8722E" alt="El aguará cruza el pastizal" height="34">
 </div>
 
 <div align="center">
