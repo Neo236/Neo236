@@ -1,29 +1,33 @@
 <div align="center">
 
-<!-- ============ HEADER: typing SVG adaptativo (prompt fijo + terminal) ============ -->
+<!-- ============ HEADER: typing SVG centrado ============ -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3000&pause=800&color=E8722E&center=false&vCenter=true&width=640&height=55&lines=%E2%9D%AF+Fullstack%3A+del+server+al+pastizal;%E2%9D%AF+Cazando+bugs+en+el+pastizal;%E2%9D%AF+sudo+apt+install+caf%C3%A9;%E2%9D%AF+Marcando+territorio+en+main;%E2%9D%AF+console.log%28%22otra+vez+de+noche%22%29;%E2%9D%AF+Olfateando+el+bug+en+el+log;%E2%9D%AF+deploy+%3E+dormir;%E2%9D%AF+Dejando+rastro+de+commits+en+el+barro;%E2%9D%AF+catch+%28bug%29+%7B+cazar%28bug%29+%7D;%E2%9D%AF+Orejas+paradas%2C+atento+al+stack+trace;%E2%9D%AF+npm+run+madrugada;%E2%9D%AF+Nocturno+por+naturaleza;%E2%9D%AF+return+caf%C3%A9+%3F%3F+m%C3%A1s_caf%C3%A9;%E2%9D%AF+Ladrido+ronco%2C+c%C3%B3digo+limpio;%E2%9D%AF+git+push+--set-upstream+monte;%E2%9D%AF+Aguar%C3%A1+guaz%C3%BA+entre+los+repos;%E2%9D%AF+throw+new+Aguar%C3%A1Exception%28%29;%E2%9D%AF+C%C3%B3digo+de+punta+a+punta;%E2%9D%AF+while%28true%29+%7B+aprender%28%29+%7D;%E2%9D%AF+git+commit+-m+%22zancada%22;%E2%9D%AF+Cada+noche%2C+algo+nuevo">
-  <img alt="❯ terminal de Neo236" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3000&pause=800&color=BC531D&center=false&vCenter=true&width=640&height=55&lines=%E2%9D%AF+Fullstack%3A+del+server+al+pastizal;%E2%9D%AF+Cazando+bugs+en+el+pastizal;%E2%9D%AF+sudo+apt+install+caf%C3%A9;%E2%9D%AF+Marcando+territorio+en+main;%E2%9D%AF+console.log%28%22otra+vez+de+noche%22%29;%E2%9D%AF+Olfateando+el+bug+en+el+log;%E2%9D%AF+deploy+%3E+dormir;%E2%9D%AF+Dejando+rastro+de+commits+en+el+barro;%E2%9D%AF+catch+%28bug%29+%7B+cazar%28bug%29+%7D;%E2%9D%AF+Orejas+paradas%2C+atento+al+stack+trace;%E2%9D%AF+npm+run+madrugada;%E2%9D%AF+Nocturno+por+naturaleza;%E2%9D%AF+return+caf%C3%A9+%3F%3F+m%C3%A1s_caf%C3%A9;%E2%9D%AF+Ladrido+ronco%2C+c%C3%B3digo+limpio;%E2%9D%AF+git+push+--set-upstream+monte;%E2%9D%AF+Aguar%C3%A1+guaz%C3%BA+entre+los+repos;%E2%9D%AF+throw+new+Aguar%C3%A1Exception%28%29;%E2%9D%AF+C%C3%B3digo+de+punta+a+punta;%E2%9D%AF+while%28true%29+%7B+aprender%28%29+%7D;%E2%9D%AF+git+commit+-m+%22zancada%22;%E2%9D%AF+Cada+noche%2C+algo+nuevo">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3000&pause=800&color=E8722E&center=true&vCenter=true&width=620&height=55&lines=Fullstack%3A+del+server+al+pastizal;Cazando+bugs+en+el+pastizal;sudo+apt+install+caf%C3%A9;Marcando+territorio+en+main;console.log%28%22otra+vez+de+noche%22%29;Olfateando+el+bug+en+el+log;deploy+%3E+dormir;Dejando+rastro+de+commits+en+el+barro;catch+%28bug%29+%7B+cazar%28bug%29+%7D;Orejas+paradas%2C+atento+al+stack+trace;npm+run+madrugada;Nocturno+por+naturaleza;return+caf%C3%A9+%3F%3F+m%C3%A1s_caf%C3%A9;Ladrido+ronco%2C+c%C3%B3digo+limpio;git+push+--set-upstream+monte;Aguar%C3%A1+guaz%C3%BA+entre+los+repos;throw+new+Aguar%C3%A1Exception%28%29;C%C3%B3digo+de+punta+a+punta;while%28true%29+%7B+aprender%28%29+%7D;git+commit+-m+%22zancada%22;Cada+noche%2C+algo+nuevo">
+  <img alt="Terminal de Neo236" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&duration=3000&pause=800&color=BC531D&center=true&vCenter=true&width=620&height=55&lines=Fullstack%3A+del+server+al+pastizal;Cazando+bugs+en+el+pastizal;sudo+apt+install+caf%C3%A9;Marcando+territorio+en+main;console.log%28%22otra+vez+de+noche%22%29;Olfateando+el+bug+en+el+log;deploy+%3E+dormir;Dejando+rastro+de+commits+en+el+barro;catch+%28bug%29+%7B+cazar%28bug%29+%7D;Orejas+paradas%2C+atento+al+stack+trace;npm+run+madrugada;Nocturno+por+naturaleza;return+caf%C3%A9+%3F%3F+m%C3%A1s_caf%C3%A9;Ladrido+ronco%2C+c%C3%B3digo+limpio;git+push+--set-upstream+monte;Aguar%C3%A1+guaz%C3%BA+entre+los+repos;throw+new+Aguar%C3%A1Exception%28%29;C%C3%B3digo+de+punta+a+punta;while%28true%29+%7B+aprender%28%29+%7D;git+commit+-m+%22zancada%22;Cada+noche%2C+algo+nuevo">
 </picture>
 
 </div>
 
 <div align="center">
 
-*El aguará guazú (Chrysocyon brachyurus) es el cánido más grande de Sudamérica: de patas largas, pelaje rojizo y hábitos solitarios y crepusculares, habita los pastizales y esteros del Gran Chaco.*
+El **aguará guazú** (*Chrysocyon brachyurus*, «zorro grande» en guaraní) es el cánido más grande de Sudamérica. No es lobo ni zorro: es la única especie de su género, de patas largas y oscuras, pelaje rojizo y una crin eréctil sobre el lomo. Solitario y de hábitos crepusculares, recorre pastizales, sabanas y esteros del Gran Chaco alimentándose de pequeños animales y frutos. Hoy figura como especie **casi amenazada** por la pérdida de su hábitat.
 
-Desarrollador **fullstack** del Gran Chaco — y, como él, rindo mejor cuando cae el sol.
+<sub>*Fuente: [Wikipedia — Chrysocyon brachyurus](https://es.wikipedia.org/wiki/Chrysocyon_brachyurus)*</sub>
 
-<img src="https://img.shields.io/badge/Java-15100C?style=for-the-badge&logo=openjdk&logoColor=E8722E" alt="Java">
-<img src="https://img.shields.io/badge/Spring_Boot-15100C?style=for-the-badge&logo=springboot&logoColor=6E8B4E" alt="Spring Boot">
-<img src="https://img.shields.io/badge/Python-15100C?style=for-the-badge&logo=python&logoColor=D9A441" alt="Python">
-<img src="https://img.shields.io/badge/JavaScript-15100C?style=for-the-badge&logo=javascript&logoColor=D9A441" alt="JavaScript">
+<br>
+
+<img src="https://img.shields.io/badge/Java-15100C?style=for-the-badge&logo=openjdk&logoColor=EFE6D8" alt="Java">
+<img src="https://img.shields.io/badge/Spring_Boot-15100C?style=for-the-badge&logo=springboot&logoColor=EFE6D8" alt="Spring Boot">
+<img src="https://img.shields.io/badge/Python-15100C?style=for-the-badge&logo=python&logoColor=EFE6D8" alt="Python">
+<img src="https://img.shields.io/badge/JavaScript-15100C?style=for-the-badge&logo=javascript&logoColor=EFE6D8" alt="JavaScript">
 <img src="https://img.shields.io/badge/C%23-15100C?style=for-the-badge&logo=dotnet&logoColor=EFE6D8" alt="C#">
-<img src="https://img.shields.io/badge/Dart-15100C?style=for-the-badge&logo=dart&logoColor=6E8B4E" alt="Dart">
+<img src="https://img.shields.io/badge/Dart-15100C?style=for-the-badge&logo=dart&logoColor=EFE6D8" alt="Dart">
 
 </div>
 
-<h2 align="center">Trabajando en…</h2>
+<div align="center">
+<img src="https://img.shields.io/badge/Trabajando_en-15100C?style=for-the-badge&labelColor=15100C&color=E8722E" alt="Trabajando en" height="34">
+</div>
 
 <!--NOW:START-->
 - **Energi AI** · proyecto para el Hackathon ONE G9 – LATAM
@@ -32,12 +36,14 @@ Desarrollador **fullstack** del Gran Chaco — y, como él, rindo mejor cuando c
 - Game dev, mi cable a tierra
 <!--NOW:END-->
 
-<h2 align="center">Huellas en el pastizal</h2>
+<div align="center">
+<img src="https://img.shields.io/badge/Huellas_en_el_pastizal-15100C?style=for-the-badge&labelColor=15100C&color=E8722E" alt="Huellas en el pastizal" height="34">
+</div>
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&locale=es&hide_border=false&include_all_commits=true&card_width=380">
-  <img alt="Estadísticas de GitHub" width="380" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&locale=es&hide_border=false&include_all_commits=true&card_width=380">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380">
+  <img alt="Estadísticas de GitHub" width="380" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&locale=es&hide_border=false&langs_count=8&card_width=380">
@@ -57,7 +63,9 @@ Desarrollador **fullstack** del Gran Chaco — y, como él, rindo mejor cuando c
 </a>
 </div>
 
-<h2 align="center">El aguará cruza el pastizal</h2>
+<div align="center">
+<img src="https://img.shields.io/badge/El_aguar%C3%A1_cruza_el_pastizal-15100C?style=for-the-badge&labelColor=15100C&color=E8722E" alt="El aguará cruza el pastizal" height="34">
+</div>
 
 <div align="center">
 
