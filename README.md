@@ -10,7 +10,10 @@
 
 <div align="center">
 
-*"El **aguará guazú** (Chrysocyon brachyurus, «zorro grande» en guaraní) es el cánido más grande de Sudamérica. No es lobo ni zorro: es la única especie de su género, de patas largas y oscuras, pelaje rojizo y una crin eréctil sobre el lomo. Solitario y de hábitos crepusculares, recorre pastizales, sabanas y esteros del Gran Chaco alimentándose de pequeños animales y frutos. Hoy figura como especie casi amenazada por la pérdida de su hábitat."*
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/descripcion-dark.svg">
+  <img alt="El aguará guazú (Chrysocyon brachyurus) es el cánido más grande de Sudamérica: patas largas, pelaje rojizo, crin eréctil; solitario y crepuscular, habita pastizales y esteros del Gran Chaco. Especie casi amenazada." src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/descripcion-light.svg">
+</picture>
 
 </div>
 
@@ -25,10 +28,14 @@
 </div>
 
 <!--NOW:START-->
-- **Energi AI** · proyecto para el Hackathon ONE G9 – LATAM
-- **Oracle Next Education** · backend con Java y Spring (Alura Latam)
-- **UNIX Soluciones** · landing y sistema de gestión interno
-- Game dev, mi cable a tierra
+<div align="center">
+
+<b>Energi AI</b> · proyecto para el Hackathon ONE G9 – LATAM<br>
+<b>Oracle Next Education</b> · backend con Java y Spring (Alura Latam)<br>
+<b>UNIX Soluciones</b> · landing y sistema de gestión interno<br>
+Game dev, mi cable a tierra
+
+</div>
 <!--NOW:END-->
 
 <div align="center">
@@ -37,12 +44,12 @@
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380">
-  <img alt="Estadísticas de GitHub" width="380" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380&v=2">
+  <img alt="Estadísticas de GitHub" width="380" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=380&v=2">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&locale=es&hide_border=false&langs_count=8&card_width=380&card_height=195">
-  <img alt="Lenguajes más usados" width="380" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&locale=es&hide_border=false&langs_count=8&card_width=380&card_height=195">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&locale=es&hide_border=false&langs_count=8&hide=shaderlab,hlsl,cmake&card_width=380&card_height=195">
+  <img alt="Lenguajes más usados" width="380" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&locale=es&hide_border=false&langs_count=8&hide=shaderlab,hlsl,cmake&card_width=380&card_height=195">
 </picture>
 </div>
 <div align="center">
