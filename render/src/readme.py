@@ -72,7 +72,7 @@ ALTS = {
 }
 
 
-def construir(texto: dict, version: str, oscuro: dict, claro: dict) -> str:
+def construir(texto: dict, version: str, oscuro: dict, claro: dict, rampa: dict) -> str:
     v = texto["vivas"]
     b = lambda n: _banda(n, ALTS[n], version)
 
@@ -104,7 +104,8 @@ def construir(texto: dict, version: str, oscuro: dict, claro: dict) -> str:
         b("huellas"), "",
         _par(v["stats"].format(tema="aguara"), v["stats"].format(tema="aguara_light"),
              "Estadísticas de GitHub", 411),
-        _par(v["lenguajes"].format(tema="aguara"), v["lenguajes"].format(tema="aguara_light"),
+        _par(v["lenguajes"].format(tema="aguara", paleta=rampa["oscuro"].replace(",", "%2C")),
+             v["lenguajes"].format(tema="aguara_light", paleta=rampa["claro"].replace(",", "%2C")),
              "Lenguajes más usados", 411),
         _par(v["racha"].format(modo="dark"), v["racha"].format(modo="light"),
              "Racha de contribuciones", 411),

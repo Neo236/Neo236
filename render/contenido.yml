@@ -133,8 +133,12 @@ typing:
 
 # Las piezas que se generan en otros servicios (no las dibuja este generador)
 vivas:
-  stats: "https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme={tema}&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=411"
-  lenguajes: "https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme={tema}&locale=es&hide_border=false&langs_count=8&hide=shaderlab%2Chlsl%2Ccmake&card_width=411&card_height=195"
+  # Se ocultan estrellas, issues y "contribuciones" (todas en 0 o 1) y se muestran
+  # PRs fusionados, su porcentaje y revisiones, que si tienen numeros reales.
+  # card_height mantiene los 195 pese a cambiar la cantidad de filas.
+  # OJO: las comas van como %2C o srcset parte la URL en varios candidatos.
+  stats: "https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme={tema}&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=411&card_height=195&hide=stars%2Cissues%2Ccontribs&show=prs_merged%2Cprs_merged_percentage%2Creviews"
+  lenguajes: "https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme={tema}&locale=es&hide_border=false&langs_count=8&hide=shaderlab%2Chlsl%2Ccmake&card_width=411&card_height=195&lang_palette={paleta}"
   racha: "https://raw.githubusercontent.com/Neo236/Neo236/output/streak-{modo}.svg"
   spotify: "https://spotify-gh.neo236.fun/api/view?uid=fkvhs82vpwh1b8th0z8i80g0g&theme=spotify-embed&show_offline=true&mode={modo}&border_radius=4.5"
   snake: "https://raw.githubusercontent.com/Neo236/Neo236/output/snake-{modo}.svg"

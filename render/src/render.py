@@ -409,7 +409,7 @@ def main():
                 resumen.append((nombre, int(l.y), len(svg) // 1024))
 
     version = str(TOKENS.get("version_bandas", 1))
-    contenido_readme = armador.construir(TEXTO, version, TOKENS["oscuro"], TOKENS["claro"])
+    contenido_readme = armador.construir(TEXTO, version, TOKENS["oscuro"], TOKENS["claro"], TOKENS["rampa_lenguajes"])
     (RAIZ.parent / "README.md").write_text(contenido_readme, encoding="utf-8", newline="")
     print(f"  README.md reescrito (bandas v{version})")
     print()
