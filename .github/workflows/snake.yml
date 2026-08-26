@@ -41,7 +41,11 @@ jobs:
             sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$archivo"
             if grep -qF "$VB_VIEJO" "$archivo"; then
               sudo sed -i "s|${VB_VIEJO}|${VB_NUEVO}|" "$archivo"
-              sudo sed -i '0,/height="192"/s//height="148"/' "$archivo"
+              # el ancho pasa de 880 al ancho real del README (831) y el alto
+              # acompana en proporcion (148 * 831/880 = 140), para que la snake
+              # quede a la misma escala que las bandas generadas
+              sudo sed -i '0,/height="192"/s//height="140"/' "$archivo"
+              sudo sed -i '0,/width="880"/s//width="831"/' "$archivo"
             else
               echo "AVISO: el viewBox cambio de forma, revisar el recorte en $archivo"
               grep -o 'viewBox="[^"]*"' "$archivo" | head -1
