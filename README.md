@@ -10,13 +10,13 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cabecera-dark.svg?v=2">
-  <img alt="neo236@pastizal:~$ whoami — Lautaro «Neo» Mambrin, Chrysocyon brachyurus subsp. fullstackurus, espécimen Nº 236" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cabecera-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cabecera-dark.svg?v=3">
+  <img alt="neo236@pastizal:~$ whoami — Lautaro «Neo» Mambrin, Chrysocyon brachyurus subsp. fullstackurus, espécimen Nº 236" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cabecera-light.svg?v=3">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/presentacion-dark.svg?v=2">
-  <img alt="neo236@pastizal:~$ ./presentacion --loop" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/presentacion-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/presentacion-dark.svg?v=3">
+  <img alt="neo236@pastizal:~$ ./presentacion --loop" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/presentacion-light.svg?v=3">
 </picture>
 
 <picture>
@@ -25,34 +25,34 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/man-dark.svg?v=2">
-  <img alt="man aguara-guazu — Subespecie fullstackurus: desarrollador fullstack endémico del Chaco. Backend en Java con Spring Boot y Python con FastAPI; frontend en React y Next.js con TypeScript. Infra propia en Oracle Cloud con Docker. Game dev en C# y Unity." src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/man-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/man-dark.svg?v=3">
+  <img alt="man aguara-guazu — Subespecie fullstackurus: desarrollador fullstack endémico del Chaco. Backend en Java con Spring Boot y Python con FastAPI; frontend en React y Next.js con TypeScript. Infra propia en Oracle Cloud con Docker. Game dev en C# y Unity." src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/man-light.svg?v=3">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/procesos-dark.svg?v=2">
-  <img alt="ps aux | grep trabajando_en — Energi AI, Oracle Next Education, UNIX Soluciones, game dev" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/procesos-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/procesos-dark.svg?v=3">
+  <img alt="ps aux | grep trabajando_en — Energi AI, Oracle Next Education, UNIX Soluciones, game dev" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/procesos-light.svg?v=3">
 </picture>
 
 </div>
 
 <a href="https://github.com/No-Country-simulation/G9-LATAM-TEAM-09">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/destacado-dark.svg?v=2">
-  <img alt="git show destacado — Energi AI: IA aplicada a energía, Hackathon ONE G9 – LATAM con No Country" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/destacado-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/destacado-dark.svg?v=3">
+  <img alt="git show destacado — Energi AI: IA aplicada a energía, Hackathon ONE G9 – LATAM con No Country" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/destacado-light.svg?v=3">
 </picture>
 </a>
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/stack-dark.svg?v=2">
-  <img alt="tree ~/stack — backend: Java/Spring Boot, Python/FastAPI, Node/Express. frontend: React/Vite, Next.js/Tailwind. datos: PostgreSQL, MySQL, MongoDB, SQLite, Redis. infra: Docker, OCI. gamedev: C#, ShaderLab, HLSL." src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/stack-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/stack-dark.svg?v=3">
+  <img alt="tree ~/stack — backend: Java/Spring Boot, Python/FastAPI, Node/Express. frontend: React/Vite, Next.js/Tailwind. datos: PostgreSQL, MySQL, MongoDB, SQLite, Redis. infra: Docker, OCI. gamedev: C#, ShaderLab, HLSL." src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/stack-light.svg?v=3">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/huellas-dark.svg?v=2">
-  <img alt="neo236@pastizal:~$ ./huellas.sh --live" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/huellas-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/huellas-dark.svg?v=3">
+  <img alt="neo236@pastizal:~$ ./huellas.sh --live" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/huellas-light.svg?v=3">
 </picture>
 
 <picture>
@@ -80,13 +80,13 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cierre-dark.svg?v=2">
-  <img alt="despierto desde ayer · deploy &gt; dormir · exit 0" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cierre-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cierre-dark.svg?v=3">
+  <img alt="despierto desde ayer · deploy &gt; dormir · exit 0" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/cierre-light.svg?v=3">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/pastizal-dark.svg?v=2">
-  <img alt="" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/pastizal-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/pastizal-dark.svg?v=3">
+  <img alt="" src="https://raw.githubusercontent.com/Neo236/Neo236/main/assets/bandas/pastizal-light.svg?v=3">
 </picture>
 
 </div>
