@@ -30,12 +30,15 @@ jobs:
           # snk corre en Docker y deja los SVG como root -> editar con sudo
           # s0=cabeza (rufo), s1=segundo bloque (crin oscura),
           # s2=cuerpo (rufo), s3=punta de la cola (blanca)
+          # ademas del color, se agrega un borde para que la snake tenga el
+          # mismo marco que las 4 cards (stroke-width 2 con la mitad recortada = 1px visible)
           inject () {
             css="<style>.s.s1{fill:#15100C;stroke:$2;stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:$2;stroke-width:1px}</style>"
-            sudo sed -i "s|</svg>|${css}</svg>|" "$1"
+            marco="<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" rx=\"6\" fill=\"none\" stroke=\"$3\" stroke-width=\"2\"/>"
+            sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$1"
           }
-          inject dist/snake-dark.svg  "#E8722E"
-          inject dist/snake-light.svg "#BC531D"
+          inject dist/snake-dark.svg  "#E8722E" "#3A2A1E"
+          inject dist/snake-light.svg "#BC531D" "#E0D3BC"
           grep -o "s\.s1{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s1"
 
       # snk corre en Docker como root y deja dist/ sin permiso de escritura
