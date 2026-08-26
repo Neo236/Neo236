@@ -25,21 +25,33 @@ jobs:
             dist/snake-dark.svg?color_snake=#E8722E&color_dots=#241C15,#4A3423,#8A5A26,#C88A2E,#D9A441
             dist/snake-light.svg?color_snake=#BC531D&color_dots=#EFE6D8,#E4C98F,#D9A441,#C87A2E,#A85014
 
-      - name: Pintar crin y cola del aguará (snake multicolor)
+      - name: Pintar crin y cola, sacar la barra y enmarcar
         run: |
-          # snk corre en Docker y deja los SVG como root -> editar con sudo
-          # s0=cabeza (rufo), s1=segundo bloque (crin oscura),
-          # s2=cuerpo (rufo), s3=punta de la cola (blanca)
-          # ademas del color, se agrega un borde para que la snake tenga el
-          # mismo marco que las 4 cards (stroke-width 2 con la mitad recortada = 1px visible)
+          # snk corre en Docker y deja los SVG como root -> editar con sudo.
+          # s1 = segundo bloque (crin oscura), s3 = punta de la cola (blanca).
+          # .u  = barra de progreso inferior -> se oculta.
+          # El viewBox arranca en (-16,-32): el marco se posiciona ahi, no en (0,0),
+          # y se recorta el alto de 192 a 148 para no dejar el hueco de la barra.
+          VB_VIEJO='viewBox="-16 -32 880 192"'
+          VB_NUEVO='viewBox="-16 -32 880 148"'
           inject () {
-            css="<style>.s.s1{fill:#15100C;stroke:$2;stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:$2;stroke-width:1px}</style>"
-            marco="<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" rx=\"6\" fill=\"none\" stroke=\"$3\" stroke-width=\"2\"/>"
-            sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$1"
+            archivo="$1"; snake="$2"; borde="$3"
+            css="<style>.s.s1{fill:#15100C;stroke:${snake};stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:${snake};stroke-width:1px}.u{display:none}</style>"
+            marco="<rect x='-15' y='-31' width='878' height='146' rx='4.5' fill='none' stroke='${borde}' stroke-width='1'/>"
+            sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$archivo"
+            if grep -qF "$VB_VIEJO" "$archivo"; then
+              sudo sed -i "s|${VB_VIEJO}|${VB_NUEVO}|" "$archivo"
+              sudo sed -i '0,/height="192"/s//height="148"/' "$archivo"
+            else
+              echo "AVISO: el viewBox cambio de forma, revisar el recorte en $archivo"
+              grep -o 'viewBox="[^"]*"' "$archivo" | head -1
+            fi
           }
           inject dist/snake-dark.svg  "#E8722E" "#3A2A1E"
           inject dist/snake-light.svg "#BC531D" "#E0D3BC"
-          grep -o "s\.s1{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s1"
+          echo "-- verificacion --"
+          head -c 160 dist/snake-dark.svg; echo
+          grep -c 'display:none' dist/snake-dark.svg
 
       # snk corre en Docker como root y deja dist/ sin permiso de escritura
       # para el usuario `runner`, que es quien ejecuta la Action de la racha.
@@ -68,7 +80,6 @@ jobs:
           ls -la dist/
           for f in dist/streak-dark.svg dist/streak-light.svg; do
             test -s "$f" || { echo "VACIO: $f"; exit 1; }
-            head -c 120 "$f"; echo
           done
 
       - name: Publicar en la rama output
