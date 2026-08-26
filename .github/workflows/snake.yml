@@ -42,14 +42,14 @@ jobs:
       # Se genera acá en vez de enlazar streak-stats.demolab.com: ese servicio
       # respondió 503, 403 y 504 en distintos momentos y rompía la card.
       - name: Generar racha (modo oscuro)
-        uses: Neo236/github-readme-streak-stats@master
+        uses: Neo236/github-readme-streak-stats@main
         with:
           path: dist/streak-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           options: "user=Neo236&locale=es&card_width=411&card_height=195&hide_border=false&background=15100C&border=3A2A1E&ring=E8722E&fire=D9A441&currStreakNum=EFE6D8&sideNums=EFE6D8&currStreakLabel=E8722E&sideLabels=D9A441&dates=8A7A66"
 
       - name: Generar racha (modo claro)
-        uses: Neo236/github-readme-streak-stats@master
+        uses: Neo236/github-readme-streak-stats@main
         with:
           path: dist/streak-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
