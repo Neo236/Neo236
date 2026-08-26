@@ -1,0 +1,92 @@
+# Todo el texto del README vive acá. Editar esto NO puede romper el diseño:
+# la maquetación está en render/src/render.py y las medidas en tokens.json.
+
+prompt: "neo236@pastizal"
+
+cabecera:
+  ruta: "neo236@pastizal: ~"
+  comando: "whoami"
+  nombre: "Lautaro «Neo» Mambrin"
+  especie: "Chrysocyon brachyurus"
+  subespecie: "subsp. fullstackurus"
+  especimen: "· espécimen Nº 236"
+
+presentacion:
+  comando: "./presentacion --loop"
+
+man:
+  comando: "man aguara-guazu"
+  encabezado: "AGUARÁ-GUAZÚ(1)"
+  centro: "Manual del pastizal"
+  secciones:
+    - titulo: "NOMBRE"
+      tipo: definicion
+      clave: "aguara-guazu"
+      valor: "— Subespecie fullstackurus: desarrollador fullstack endémico del Chaco"
+    - titulo: "SINOPSIS"
+      tipo: uso
+      clave: "aguara-guazu"
+      lineas:
+        - "[--backend java|python|node] [--frontend react|next]"
+        - "[--datos sql|mongo] [--infra oci] [--gamedev unity]"
+    - titulo: "DESCRIPCIÓN"
+      tipo: prosa
+      parrafos:
+        - "Cánido de patas largas y hábitos crepusculares, endémico del Chaco. Construye backends en Java con Spring Boot y en Python con FastAPI, y resuelve el frontend en React y Next.js con TypeScript."
+        - "Elige la base de datos según la presa: relacional cuando el dato tiene forma, Mongo cuando todavía no la tiene."
+    - titulo: "ENTORNO"
+      tipo: variables
+      filas:
+        - ["OCI_TENANCY", "Territorio propio en Oracle Cloud"]
+        - ["DOCKER", "Contenedores y self-hosting de sus propios servicios"]
+        - ["GAMEDEV", "C# y Unity, cuando baja el sol"]
+    - titulo: "ESTADO"
+      tipo: prosa
+      parrafos:
+        - "Casi amenazado. Principal amenaza: los deadlines."
+    - titulo: "VER TAMBIÉN"
+      tipo: apagado
+      parrafos:
+        - "ps(1), tree(1), git-show(1), huellas.sh(1)"
+
+procesos:
+  comando: "ps aux | grep trabajando_en"
+  filas:
+    - ["PID 01", "Energi AI", "· Hackathon ONE G9 – LATAM"]
+    - ["PID 02", "Oracle Next Education", "· Java y Spring (Alura Latam)"]
+    - ["PID 03", "UNIX Soluciones", "· landing y gestión interna"]
+    - ["PID 04", "Game dev", "· corriendo en segundo plano"]
+
+destacado:
+  comando: "git show destacado"
+  hash: "a3f9c21"
+  ref: "(HEAD → destacado, tag:"
+  tag: "energi-ai)"
+  titulo: "Energi AI"
+  descripcion: "IA aplicada a energía · Hackathon ONE G9 – LATAM, con No Country"
+  repo: "No-Country-simulation/G9-LATAM-TEAM-09"
+  url: "https://github.com/No-Country-simulation/G9-LATAM-TEAM-09"
+
+stack:
+  comando: "tree ~/stack"
+  filas:
+    - ["",          "~/stack",   "",                                              0]
+    - ["├── ",      "backend/",  "",                                              1]
+    - ["│   ├── ",  "java/",     "Spring Boot · JPA · Flyway · Security",          2]
+    - ["│   ├── ",  "python/",   "FastAPI · SQLAlchemy · Alembic",                 2]
+    - ["│   └── ",  "node/",     "Express · TypeScript",                           2]
+    - ["├── ",      "frontend/", "",                                              1]
+    - ["│   ├── ",  "react/",    "Vite · Router · Vitest",                         2]
+    - ["│   └── ",  "next/",     "Tailwind · TypeScript",                          2]
+    - ["├── ",      "datos/",    "PostgreSQL · MySQL · MongoDB · SQLite · Redis",  1]
+    - ["├── ",      "infra/",    "Docker · OCI (tenancy propio) · self-hosting",   1]
+    - ["└── ",      "gamedev/",  "",                                              1]
+    - ["    └── ",  "unity/",    "C# · ShaderLab · HLSL",                          2]
+
+huellas:
+  comando: "./huellas.sh --live"
+
+cierre:
+  izquierda: "despierto desde ayer ·"
+  centro: "deploy > dormir"
+  derecha: "· exit 0"
