@@ -1,4 +1,4 @@
-name: generar snake aguará
+name: generar assets del perfil
 
 on:
   schedule:
@@ -14,8 +14,9 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
+      # ---------- snake de contribuciones ----------
       - name: Generar snake con paleta aguará
         uses: Platane/snk@v3
         with:
@@ -29,17 +30,38 @@ jobs:
           # snk corre en Docker y deja los SVG como root -> editar con sudo
           # s0=cabeza (rufo), s1=segundo bloque (crin oscura),
           # s2=cuerpo (rufo), s3=punta de la cola (blanca)
-          # contorno rufo para que crin y cola se vean en ambos temas
-          ls -la dist || true
           inject () {
             css="<style>.s.s1{fill:#15100C;stroke:$2;stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:$2;stroke-width:1px}</style>"
             sudo sed -i "s|</svg>|${css}</svg>|" "$1"
           }
           inject dist/snake-dark.svg  "#E8722E"
           inject dist/snake-light.svg "#BC531D"
-          echo "== verificacion dark =="
           grep -o "s\.s1{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s1"
-          grep -o "s\.s3{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s3"
+
+      # ---------- racha de contribuciones ----------
+      # Se genera acá en vez de enlazar streak-stats.demolab.com: ese servicio
+      # respondió 503, 403 y 504 en distintos momentos y rompía la card.
+      - name: Generar racha (modo oscuro)
+        uses: Neo236/github-readme-streak-stats@master
+        with:
+          path: dist/streak-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          options: "user=Neo236&locale=es&card_width=411&card_height=195&hide_border=false&background=15100C&border=3A2A1E&ring=E8722E&fire=D9A441&currStreakNum=EFE6D8&sideNums=EFE6D8&currStreakLabel=E8722E&sideLabels=D9A441&dates=8A7A66"
+
+      - name: Generar racha (modo claro)
+        uses: Neo236/github-readme-streak-stats@master
+        with:
+          path: dist/streak-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          options: "user=Neo236&locale=es&card_width=411&card_height=195&hide_border=false&background=F7F0E3&border=E0D3BC&ring=BC531D&fire=A17C24&currStreakNum=33261C&sideNums=33261C&currStreakLabel=BC531D&sideLabels=A17C24&dates=8A7A66"
+
+      - name: Verificar lo generado
+        run: |
+          ls -la dist/
+          for f in dist/streak-dark.svg dist/streak-light.svg; do
+            test -s "$f" || { echo "VACIO: $f"; exit 1; }
+            head -c 120 "$f"; echo
+          done
 
       - name: Publicar en la rama output
         uses: crazy-max/ghaction-github-pages@v4

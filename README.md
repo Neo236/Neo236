@@ -48,14 +48,14 @@ Game dev, mi cable a tierra
   <img alt="Estadísticas de GitHub" width="411" src="https://readmestats.neo236.fun/api?username=Neo236&show_icons=true&theme=aguara_light&locale=es&custom_title=GitHub%20Stats&hide_border=false&include_all_commits=true&card_width=411&v=2">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&locale=es&hide_border=false&langs_count=8&hide=shaderlab,hlsl,cmake&card_width=411&card_height=195">
-  <img alt="Lenguajes más usados" width="411" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&locale=es&hide_border=false&langs_count=8&hide=shaderlab,hlsl,cmake&card_width=411&card_height=195">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara&locale=es&hide_border=false&langs_count=8&hide=shaderlab%2Chlsl%2Ccmake&card_width=411&card_height=195">
+  <img alt="Lenguajes más usados" width="411" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&layout=compact&theme=aguara_light&locale=es&hide_border=false&langs_count=8&hide=shaderlab%2Chlsl%2Ccmake&card_width=411&card_height=195">
 </picture>
 </div>
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Neo236&locale=es&background=15100C&border=3A2A1E&ring=E8722E&fire=D9A441&currStreakNum=EFE6D8&sideNums=EFE6D8&currStreakLabel=E8722E&sideLabels=D9A441&dates=8A7A66&hide_border=false&card_width=411&card_height=195">
-  <img alt="Racha de contribuciones" width="411" src="https://streak-stats.demolab.com?user=Neo236&locale=es&background=F7F0E3&border=E0D3BC&ring=BC531D&fire=A17C24&currStreakNum=33261C&sideNums=33261C&currStreakLabel=BC531D&sideLabels=A17C24&dates=8A7A66&hide_border=false&card_width=411&card_height=195">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/output/streak-dark.svg">
+  <img alt="Racha de contribuciones" width="411" src="https://raw.githubusercontent.com/Neo236/Neo236/output/streak-light.svg">
 </picture>
 <a href="https://open.spotify.com/user/fkvhs82vpwh1b8th0z8i80g0g">
 <picture>
