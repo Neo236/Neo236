@@ -35,10 +35,15 @@ jobs:
           VB_VIEJO='viewBox="-16 -32 880 192"'
           VB_NUEVO='viewBox="-16 -32 880 148"'
           inject () {
-            archivo="$1"; snake="$2"; borde="$3"
+            archivo="$1"; snake="$2"; borde="$3"; fondo="$4"
             css="<style>.s.s1{fill:#15100C;stroke:${snake};stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:${snake};stroke-width:1px}.u{display:none}</style>"
             marco="<rect x='-15' y='-31' width='878' height='146' rx='4.5' fill='none' stroke='${borde}' stroke-width='1'/>"
             sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$archivo"
+            # el fondo va DETRAS de todo: se inserta justo despues del <svg>,
+            # no antes de </svg>, o taparia la grilla. Cubre el viewBox completo,
+            # que arranca en (-16,-32).
+            relleno="<rect x='-16' y='-32' width='880' height='148' rx='4.5' fill='${fondo}'/>"
+            sudo perl -0pi -e "s|(<svg[^>]*>)|\$1${relleno}|" "$archivo"
             if grep -qF "$VB_VIEJO" "$archivo"; then
               sudo sed -i "s|${VB_VIEJO}|${VB_NUEVO}|" "$archivo"
               # el ancho pasa de 880 al ancho real del README (831) y el alto
@@ -51,8 +56,8 @@ jobs:
               grep -o 'viewBox="[^"]*"' "$archivo" | head -1
             fi
           }
-          inject dist/snake-dark.svg  "#E8722E" "#3A2A1E"
-          inject dist/snake-light.svg "#BC531D" "#E0D3BC"
+          inject dist/snake-dark.svg  "#E8722E" "#3A2A1E" "#15100C"
+          inject dist/snake-light.svg "#BC531D" "#E0D3BC" "#F7F0E3"
           echo "-- verificacion --"
           head -c 160 dist/snake-dark.svg; echo
           grep -c 'display:none' dist/snake-dark.svg

@@ -20,6 +20,8 @@ from pathlib import Path
 
 import yaml
 from fontTools import subset
+
+import readme as armador
 from fontTools.ttLib import TTFont
 from fontTools.varLib import instancer
 
@@ -405,6 +407,12 @@ def main():
             (SALIDA / f"{nombre}-{sufijo}.svg").write_text(svg, encoding="utf-8")
             if modo == "oscuro":
                 resumen.append((nombre, int(l.y), len(svg) // 1024))
+
+    version = str(TOKENS.get("version_bandas", 1))
+    contenido_readme = armador.construir(TEXTO, version, TOKENS["oscuro"], TOKENS["claro"])
+    (RAIZ.parent / "README.md").write_text(contenido_readme, encoding="utf-8", newline="")
+    print(f"  README.md reescrito (bandas v{version})")
+    print()
 
     print(f"  {'banda':14}{'alto':>7}{'KB':>7}")
     for n, alto, kb in resumen:
