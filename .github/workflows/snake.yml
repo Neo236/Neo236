@@ -38,6 +38,11 @@ jobs:
           inject dist/snake-light.svg "#BC531D"
           grep -o "s\.s1{[^}]*}" dist/snake-dark.svg || echo "no se inyecto s1"
 
+      # snk corre en Docker como root y deja dist/ sin permiso de escritura
+      # para el usuario `runner`, que es quien ejecuta la Action de la racha.
+      - name: Devolver dist/ al usuario del runner
+        run: sudo chown -R "$(id -u):$(id -g)" dist && ls -ld dist
+
       # ---------- racha de contribuciones ----------
       # Se genera acá en vez de enlazar streak-stats.demolab.com: ese servicio
       # respondió 503, 403 y 504 en distintos momentos y rompía la card.
