@@ -60,8 +60,8 @@
   <img alt="Estadísticas de GitHub" width="411" src="https://readmestats.neo236.fun/api?username=Neo236&amp;show_icons=true&amp;theme=aguara_light&amp;locale=es&amp;custom_title=GitHub%20Stats&amp;hide_border=false&amp;include_all_commits=true&amp;card_width=411&amp;card_height=195&amp;hide=stars%2Cissues%2Ccontribs&amp;show=prs_merged%2Cprs_merged_percentage%2Creviews">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&amp;layout=compact&amp;theme=aguara&amp;locale=es&amp;hide_border=false&amp;langs_count=8&amp;hide=shaderlab%2Chlsl%2Ccmake&amp;card_width=411&amp;card_height=195&amp;lang_palette=D9A441%2CC88A2E%2CE8722E%2CBC531D%2C8A5A26%2C4A3423">
-  <img alt="Lenguajes más usados" width="411" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&amp;layout=compact&amp;theme=aguara_light&amp;locale=es&amp;hide_border=false&amp;langs_count=8&amp;hide=shaderlab%2Chlsl%2Ccmake&amp;card_width=411&amp;card_height=195&amp;lang_palette=927020%2CA85014%2CBC531D%2C8A5A26%2C4A3423%2C33261C">
+  <source media="(prefers-color-scheme: dark)" srcset="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&amp;layout=compact&amp;theme=aguara&amp;locale=es&amp;hide_border=false&amp;langs_count=8&amp;hide=shaderlab%2Chlsl%2Ccmake&amp;card_width=411&amp;card_height=195&amp;lang_palette=D9A441%2CDC9B39%2CDF8F32%2CE57C2F%2CDE6D2A%2CC96321%2CAB5D22%2C8A5A26">
+  <img alt="Lenguajes más usados" width="411" src="https://readmestats.neo236.fun/api/top-langs/?username=Neo236&amp;layout=compact&amp;theme=aguara_light&amp;locale=es&amp;hide_border=false&amp;langs_count=8&amp;hide=shaderlab%2Chlsl%2Ccmake&amp;card_width=411&amp;card_height=195&amp;lang_palette=A58131%2CA16E24%2C975C1B%2C8A4C16%2C793F14%2C653515%2C4E2D18%2C33261C">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Neo236/Neo236/output/streak-dark.svg">

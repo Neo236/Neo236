@@ -15,8 +15,14 @@ import base64
 import io
 import json
 import math
+import os
 import re
 from pathlib import Path
+
+# fontTools estampa la hora actual en head.modified de cada subset, asi que dos
+# corridas seguidas producian WOFF2 distintos y el diff tocaba las 18 bandas
+# aunque no cambiara nada visual. Con esto el generador es reproducible.
+os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import yaml
 from fontTools import subset

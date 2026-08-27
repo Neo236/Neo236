@@ -57,8 +57,7 @@
   },
   "version_bandas": 4,
   "rampa_lenguajes": {
-    "_nota": "Escalones parejos de L* y >=3:1 del punto sobre el fondo de la tarjeta (WCAG 1.4.11, objeto grafico). El mas usado toma el tono mas claro.",
-    "oscuro": "D9A441,DC9B39,DF8F32,E57C2F,DE6D2A,C96321,AB5D22,8A5A26",
-    "claro": "A58131,A16E24,975C1B,8A4C16,793F14,653515,4E2D18,33261C"
+    "oscuro": "D9A441,C88A2E,E8722E,BC531D,8A5A26,4A3423",
+    "claro": "927020,A85014,BC531D,8A5A26,4A3423,33261C"
   }
 }
