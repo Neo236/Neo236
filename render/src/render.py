@@ -64,10 +64,27 @@ def _subset_b64(fuente: TTFont, caracteres: str) -> str:
     return base64.b64encode(buf.getvalue()).decode("ascii")
 
 
-def _todos_los_caracteres() -> str:
-    plano = json.dumps(TEXTO, ensure_ascii=False)
-    extra = "─│├└→«»·…—▮█0123456789"
-    return "".join(sorted(set(plano + extra)))
+_CACHE_SUBSET: dict[tuple, str] = {}
+
+
+def _fuentes_para(l: "Lienzo") -> list[tuple]:
+    """Las caras que embebe UNA banda: solo las que usa y solo sus glifos.
+
+    Antes se subseteaba una vez con todos los caracteres de todo el contenido
+    y se embebia ese mismo blob en las nueve bandas: 26.8 KB repetidos ocho
+    veces, el 88% del peso de las bandas, y siete de ellas cargando la serif
+    sin usarla. Como cada banda es un <img> aparte no pueden compartir nada,
+    asi que la unica salida es que cada una lleve lo justo.
+    """
+    fuentes = []
+    for (fam, peso) in sorted(l.usados):
+        glifos = "".join(sorted(l.usados[(fam, peso)]))
+        archivo, estilo = ("Lora-Italic.ttf", "italic") if fam == "LO" else ("FiraCode-Variable.ttf", "normal")
+        clave = (archivo, peso, glifos)
+        if clave not in _CACHE_SUBSET:
+            _CACHE_SUBSET[clave] = _subset_b64(_instanciar(archivo, peso), glifos)
+        fuentes.append((fam, peso, estilo, _CACHE_SUBSET[clave]))
+    return fuentes
 
 
 class Medidor:
@@ -118,10 +135,13 @@ class Lienzo:
     def __init__(self):
         self.partes: list[str] = []
         self.y = 0.0
+        # que caras y que glifos pide esta banda, para embeber solo eso
+        self.usados: dict[tuple[str, int], set[str]] = {}
 
     def texto(self, x, base, contenido, color, tam=13, peso=400, serif=False,
               ancla="start", subrayado=False):
         fam = "LO" if serif else "FC"
+        self.usados.setdefault((fam, peso), set()).update(contenido)
         estilo = "font-style:italic;" if serif else ""
         deco = "text-decoration:underline;" if subrayado else ""
         self.partes.append(
@@ -384,14 +404,7 @@ def envolver_svg(lienzo: Lienzo, alto: float, fuentes, titulo: str) -> str:
 
 
 def main():
-    caracteres = _todos_los_caracteres()
-    mono400 = _subset_b64(_instanciar("FiraCode-Variable.ttf", 400), caracteres)
-    mono600 = _subset_b64(_instanciar("FiraCode-Variable.ttf", 600), caracteres)
-    serif_b64 = _subset_b64(_instanciar("Lora-Italic.ttf", 400), caracteres)
     medidor = Medidor(TTFont(RAIZ / "fuentes" / "Lora-Italic.ttf"))
-    fuentes = [("FC", 400, "normal", mono400),
-               ("FC", 600, "normal", mono600),
-               ("LO", 400, "italic", serif_b64)]
 
     SALIDA.mkdir(parents=True, exist_ok=True)
     resumen = []
@@ -407,8 +420,7 @@ def main():
             else:
                 fn(l, C, medidor)
             l.y += MARGEN_PIE
-            svg = envolver_svg(l, math.ceil(l.y),
-                               [] if nombre == "pastizal" else fuentes, nombre)
+            svg = envolver_svg(l, math.ceil(l.y), _fuentes_para(l), nombre)
             sufijo = "dark" if modo == "oscuro" else "light"
             (SALIDA / f"{nombre}-{sufijo}.svg").write_text(svg, encoding="utf-8")
             if modo == "oscuro":
