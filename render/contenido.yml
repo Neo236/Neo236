@@ -47,7 +47,7 @@ man:
     - titulo: "VER TAMBIÉN"
       tipo: apagado
       parrafos:
-        - "ps(1), tree(1), git-show(1), huellas.sh(1)"
+        - "ps(1), tree(1), git-show(1), huellas.sh(1), CREDITOS.md"
 
 procesos:
   comando: "ps aux | grep trabajando_en"
