@@ -117,7 +117,7 @@ typing:
     vCenter: true
     width: 831
     height: 64
-    v: 2                # SOLO para romper cache: GitHub sirve las imagenes por
+    v: 3                # SOLO para romper cache: GitHub sirve las imagenes por
                         # camo y cachea por URL, asi que un cambio en la
                         # PLANTILLA no se ve hasta que cambie la URL. Subir este
                         # numero cuando se toque el fork de readme-typing-svg.
