@@ -93,8 +93,12 @@ cierre:
 
 # El typing es la unica pieza animada en vivo del encabezado. Se sirve desde
 # el fork propio (readme-typing-svg) y comparte caja con las demas tarjetas.
+# El proyecto "typing-aguara" en Vercel esta ENLAZADO al repo, asi que cada
+# push a main despliega solo. El proyecto viejo "readme-typing-svg" no lo
+# estaba: se desplegaba subiendo archivos a mano, y por eso los cambios
+# pusheados no aparecian nunca.
 typing:
-  base: "https://readme-typing-svg-lyart.vercel.app/"
+  base: "https://typing-aguara-neo236s-projects.vercel.app/"
   parametros:
     font: "Fira Code"
     weight: 500
