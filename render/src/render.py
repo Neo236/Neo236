@@ -181,7 +181,7 @@ def banda_cabecera(l: Lienzo, C: dict, M: Medidor):
         f'<line x1="0" y1="{alto_barra-0.5}" x2="{ANCHO}" y2="{alto_barra-0.5}" '
         f'stroke="{C["borde/github"]}" stroke-width="1"/>'
     )
-    for i, col in enumerate(["#BC531D", "#D9A441", "#8A5A26"]):
+    for i, col in enumerate(C["barra/botones"]):
         l.circulo(19.5 + i * 18, alto_barra / 2, 5.5, col)
     l.texto(ANCHO / 2, alto_barra / 2 + TAM_CHIP * 0.35, c["ruta"],
             C["texto/apagado"], TAM_CHIP, ancla="middle")
