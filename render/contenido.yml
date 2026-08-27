@@ -104,8 +104,13 @@ typing:
     weight: 500
     size: 18
     duration: 3000      # tiempo de tipeo de la linea MAS LARGA; el resto escala
-    pause: 900          # sostiene la linea escrita
-    restPause: 1400     # vacio con el cursor parpateando antes de la siguiente
+                        # proporcional, o sea velocidad constante por caracter
+    pause: 2400         # sostiene la linea escrita. FIJA: no depende del largo.
+                        # Antes decia 900 pero se sentia ~2000 porque el path
+                        # seguia creciendo despues de que el texto ya estaba
+                        # entero. Sacado ese tiempo muerto, hay que declararla.
+    restPause: 1600     # vacio con el cursor parpadeando. Tambien fija, y mas
+                        # corta que pause: cuesta mas leer que esperar.
     padding: 20
     borderRadius: 4
     center: false
