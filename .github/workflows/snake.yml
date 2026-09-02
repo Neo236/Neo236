@@ -30,26 +30,34 @@ jobs:
           # snk corre en Docker y deja los SVG como root -> editar con sudo.
           # s1 = segundo bloque (crin oscura), s3 = punta de la cola (blanca).
           # .u  = barra de progreso inferior -> se oculta.
-          # El viewBox arranca en (-16,-32): el marco se posiciona ahi, no en (0,0),
-          # y se recorta el alto de 192 a 148 para no dejar el hueco de la barra.
+          # RECORTE. La grilla ocupa y 1.5..110.5 (7 filas de 12px, paso 16) y
+          # x 1.5..846.5. La serpiente ademas sale una fila FUERA de la grilla
+          # por arriba (y -15.2) y por abajo (y 127.2): son las posiciones de
+          # entrada y salida del tablero, y hay que dejarlas entrar enteras.
+          #
+          # El recorte anterior dejaba 33.5px arriba y 5.5px abajo -> se veia
+          # descentrado, y la salida de abajo quedaba rebanada: se veian 3.2px
+          # de un cuadrado de 14.4. Con '-16 -16 880 144' quedan 17.5px en los
+          # CUATRO lados (igual que el margen horizontal, que ya era 17.5) y
+          # las dos posiciones fuera de la grilla entran justas.
           VB_VIEJO='viewBox="-16 -32 880 192"'
-          VB_NUEVO='viewBox="-16 -32 880 148"'
+          VB_NUEVO='viewBox="-16 -16 880 144"'
           inject () {
             archivo="$1"; snake="$2"; borde="$3"; fondo="$4"
             css="<style>.s.s1{fill:#15100C;stroke:${snake};stroke-width:1px}.s.s3{fill:#FFFFFF;stroke:${snake};stroke-width:1px}.u{display:none}</style>"
-            marco="<rect x='-15' y='-31' width='878' height='146' rx='4.5' fill='none' stroke='${borde}' stroke-width='1'/>"
+            marco="<rect x='-15' y='-15' width='878' height='142' rx='4.5' fill='none' stroke='${borde}' stroke-width='1'/>"
             sudo sed -i "s|</svg>|${css}${marco}</svg>|" "$archivo"
             # el fondo va DETRAS de todo: se inserta justo despues del <svg>,
             # no antes de </svg>, o taparia la grilla. Cubre el viewBox completo,
-            # que arranca en (-16,-32).
-            relleno="<rect x='-16' y='-32' width='880' height='148' rx='4.5' fill='${fondo}'/>"
+            # que arranca en (-16,-16).
+            relleno="<rect x='-16' y='-16' width='880' height='144' rx='4.5' fill='${fondo}'/>"
             sudo perl -0pi -e "s|(<svg[^>]*>)|\$1${relleno}|" "$archivo"
             if grep -qF "$VB_VIEJO" "$archivo"; then
               sudo sed -i "s|${VB_VIEJO}|${VB_NUEVO}|" "$archivo"
               # el ancho pasa de 880 al ancho real del README (831) y el alto
-              # acompana en proporcion (148 * 831/880 = 140), para que la snake
+              # acompana en proporcion (144 * 831/880 = 136), para que la snake
               # quede a la misma escala que las bandas generadas
-              sudo sed -i '0,/height="192"/s//height="140"/' "$archivo"
+              sudo sed -i '0,/height="192"/s//height="136"/' "$archivo"
               sudo sed -i '0,/width="880"/s//width="831"/' "$archivo"
             else
               echo "AVISO: el viewBox cambio de forma, revisar el recorte en $archivo"
