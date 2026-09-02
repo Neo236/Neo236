@@ -13,10 +13,15 @@ tal cual que modificarlo.
 | [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) | Jonah Lawrence (DenverCoder1) | MIT | **Fork modificado**, self-hosteado |
 | [github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats) | Jonah Lawrence (DenverCoder1) | MIT | Fork **sin modificar**, usado como GitHub Action |
 | [snk](https://github.com/Platane/snk) | Platane | *sin licencia declarada* | Action publicada, **sin modificar** su código |
-| [Shields.io](https://shields.io) | Shields.io | CC0 (servicio) | Se consume el servicio público |
-| [Fira Code](https://github.com/tonsky/FiraCode) | Nikita Prokopov | SIL OFL 1.1 | Tipografía |
+| [Fira Code](https://github.com/tonsky/FiraCode) | Nikita Prokopov | SIL OFL 1.1 | Tipografía, **subseteada y embebida** en las bandas y en el typing |
+| [Lora](https://github.com/cyrealtype/Lora-Cyrillic) | Cyreal | SIL OFL 1.1 | Tipografía del nombre científico, **subseteada y embebida** |
+| [Google Fonts](https://fonts.google.com) | Google | servicio | El typing le pide Fira Code **en cada request** |
 
 Los cuatro forks conservan intacto el archivo `LICENSE` original, como exige la licencia MIT.
+
+Las dos tipografías son **SIL OFL 1.1**, que permite embeberlas pero pide atribución: por eso
+figuran acá y no solo en el código. Se embeben subconjuntos, no la fuente completa, y no se
+venden ni se redistribuyen por separado.
 
 ## Qué modificamos en cada fork
 
@@ -26,7 +31,14 @@ Genera las tarjetas de estadísticas y de lenguajes.
 - El círculo de rango se reemplazó por un GIF recortado en círculo con un aro del color del tema.
 - Se agregó el parámetro `card_height` a la tarjeta de lenguajes, para poder igualar alturas.
 - Se bajó el ancho mínimo de la tarjeta con rango, para que entre en el ancho real del README.
-- Se acortó la etiqueta de contribuciones en español.
+- Se agregó el parámetro `lang_palette`, que reasigna los colores de los lenguajes
+  interpolando una rampa propia en orden de uso, en vez de usar los colores oficiales de
+  GitHub — que eran lo único del perfil que ignoraba la paleta.
+- Se acortaron etiquetas en español que chocaban con su valor.
+- Se subió el contraste del título en el tema claro para cumplir 4.5:1 sobre el fondo de la
+  propia tarjeta.
+
+  El detalle está en [`MODIFICACIONES.md`](https://github.com/Neo236/github-readme-stats/blob/master/MODIFICACIONES.md) del fork.
 
 ### spotify-github-profile → [`Neo236/spotify-github-profile`](https://github.com/Neo236/spotify-github-profile)
 Muestra qué estoy escuchando.
@@ -38,9 +50,17 @@ Muestra qué estoy escuchando.
 
 ### readme-typing-svg → [`Neo236/readme-typing-svg`](https://github.com/Neo236/readme-typing-svg)
 La línea de texto que se escribe sola en la cabecera.
-- Se agregó un **cursor de bloque parpadeante** al final de cada línea.
-- El carácter del cursor se sumó al subconjunto de la fuente que se descarga, para que no falte.
+- Se reescribió la animación para que se comporte como una terminal: velocidad de tipeo
+  constante, revelado y cursor **paso a paso por carácter**, y cursor sólido mientras se
+  escribe que parpadea solo cuando está esperando.
+- Se corrigió que el padding se contara dos veces, lo que cortaba los últimos dos caracteres
+  de cada frase.
+- Se agregaron los parámetros `padding`, `borderColor`, `borderRadius` y `restPause`.
+- Se agregó una línea quieta bajo `prefers-reduced-motion`, porque es una animación en bucle
+  sin forma de pausarla (WCAG 2.2.2).
 - Se agregó configuración de despliegue para Vercel y se corrigió la resolución del autoload.
+
+  El detalle está en [`MODIFICACIONES.md`](https://github.com/Neo236/readme-typing-svg/blob/main/MODIFICACIONES.md) del fork.
 
 ### github-readme-streak-stats → [`Neo236/github-readme-streak-stats`](https://github.com/Neo236/github-readme-streak-stats)
 La racha de contribuciones. **No se modificó el código.** Se usa como GitHub Action para generar
