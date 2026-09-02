@@ -7,6 +7,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      # solo cuando cambia el workflow. Sin esto corria en CADA push a main,
+      # incluso los que solo tocan el README, y volvia a ejecutar las acciones
+      # de terceros sin motivo.
+      - .github/workflows/snake.yml
 
 permissions:
   contents: write
@@ -18,7 +23,10 @@ jobs:
     steps:
       # ---------- snake de contribuciones ----------
       - name: Generar snake con paleta aguará
-        uses: Platane/snk@v3
+        # Fijada al SHA, no a la etiqueta: una etiqueta se puede mover y esta
+        # accion corre con contents:write sobre el repo. Para actualizarla hay
+        # que cambiar el SHA a mano, a proposito.
+        uses: Platane/snk@d8f6715049803e982ee5ff501b6b9b7d5deeb09b  # v3
         with:
           github_user_name: Neo236
           outputs: |
@@ -100,7 +108,8 @@ jobs:
           done
 
       - name: Publicar en la rama output
-        uses: crazy-max/ghaction-github-pages@v4
+        # Esta ademas recibe el GITHUB_TOKEN, con mas razon va fijada al SHA.
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865  # v4
         with:
           target_branch: output
           build_dir: dist
