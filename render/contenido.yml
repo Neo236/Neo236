@@ -147,6 +147,15 @@ typing:
 
 # Las piezas que se generan en otros servicios (no las dibuja este generador)
 vivas:
+  # Medidas intrinsecas de cada pieza viva. Van al <img> como width/height para
+  # que el navegador RESERVE el espacio antes de que la imagen llegue: sin eso
+  # cada hueco vale 0px hasta que carga y la grilla salta. La de stats pesa
+  # 363 KB y tarda ~3s, es la ultima en aparecer, y mientras tanto su hueco
+  # colapsado deja que las de al lado se le metan encima.
+  medidas:
+    tarjeta: [411, 195]
+    snake: [831, 136]     # lo fija el recorte en .github/workflows/snake.yml
+
   # Se ocultan estrellas, issues y "contribuciones" (todas en 0 o 1) y se muestran
   # PRs fusionados, su porcentaje y revisiones, que si tienen numeros reales.
   # card_height mantiene los 195 pese a cambiar la cantidad de filas.

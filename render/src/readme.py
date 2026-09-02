@@ -9,6 +9,7 @@ from __future__ import annotations
 from urllib.parse import quote
 
 RAW = "https://raw.githubusercontent.com/Neo236/Neo236"
+ANCHO_BANDA = 831   # ancho real del area de contenido del README
 
 
 def _atr(texto: str) -> str:
@@ -21,20 +22,34 @@ def _atr(texto: str) -> str:
                  .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def _banda(nombre: str, alt: str, version: str) -> str:
+def _medidas(ancho, alto) -> str:
+    """width y height en el <img>, SIEMPRE los dos juntos.
+
+    Con ambos el navegador deduce la relacion de aspecto y reserva la caja
+    exacta antes de descargar la imagen. Con uno solo (o ninguno) el hueco
+    vale 0px hasta que la imagen llega y la maquetacion salta cuando aparece:
+    eso hacia que una tarjeta se "cayera" de la grilla mientras cargaba la de
+    stats, que pesa 363 KB y es la ultima en aparecer.
+    """
+    if not ancho or not alto:
+        return ""
+    return f' width="{ancho}" height="{alto}"'
+
+
+def _banda(nombre: str, alt: str, version: str, alto: int | None = None) -> str:
     d = f"{RAW}/main/assets/bandas/{nombre}-dark.svg?v={version}"
     c = f"{RAW}/main/assets/bandas/{nombre}-light.svg?v={version}"
     return ('<picture>\n'
             f'  <source media="(prefers-color-scheme: dark)" srcset="{d}">\n'
-            f'  <img alt="{_atr(alt)}" src="{c}">\n'
+            f'  <img alt="{_atr(alt)}"{_medidas(ANCHO_BANDA, alto)} src="{c}">\n'
             '</picture>')
 
 
-def _par(oscuro: str, claro: str, alt: str, ancho: int | None = None) -> str:
-    w = f' width="{ancho}"' if ancho else ""
+def _par(oscuro: str, claro: str, alt: str,
+         ancho: int | None = None, alto: int | None = None) -> str:
     return ('<picture>\n'
             f'  <source media="(prefers-color-scheme: dark)" srcset="{_atr(oscuro)}">\n'
-            f'  <img alt="{_atr(alt)}"{w} src="{_atr(claro)}">\n'
+            f'  <img alt="{_atr(alt)}"{_medidas(ancho, alto)} src="{_atr(claro)}">\n'
             '</picture>')
 
 
@@ -72,9 +87,15 @@ ALTS = {
 }
 
 
-def construir(texto: dict, version: str, oscuro: dict, claro: dict, rampa: dict) -> str:
+def construir(texto: dict, version: str, oscuro: dict, claro: dict, rampa: dict,
+              altos: dict) -> str:
     v = texto["vivas"]
-    b = lambda n: _banda(n, ALTS[n], version)
+    med = v["medidas"]
+    tw, th = med["tarjeta"]
+    sw, sh = med["snake"]
+    tp = texto["typing"]["parametros"]
+    # altos: el alto real de cada banda, tal como quedo en el SVG generado
+    b = lambda n: _banda(n, ALTS[n], version, altos[n])
 
     partes = [
         "<!--",
@@ -91,7 +112,8 @@ def construir(texto: dict, version: str, oscuro: dict, claro: dict, rampa: dict)
         b("presentacion"), "",
         _par(_url_typing(texto["typing"], oscuro),
              _url_typing(texto["typing"], claro),
-             "Fullstack: del server al pastizal · Cazando bugs en el pastizal · npm run madrugada"),
+             "Fullstack: del server al pastizal · Cazando bugs en el pastizal · npm run madrugada",
+             tp["width"], tp["height"]),
         "",
         b("man"), "",
         b("procesos"), "",
@@ -103,18 +125,18 @@ def construir(texto: dict, version: str, oscuro: dict, claro: dict, rampa: dict)
         b("stack"), "",
         b("huellas"), "",
         _par(v["stats"].format(tema="aguara"), v["stats"].format(tema="aguara_light"),
-             "Estadísticas de GitHub", 411),
+             "Estadísticas de GitHub", tw, th),
         _par(v["lenguajes"].format(tema="aguara", paleta=rampa["oscuro"].replace(",", "%2C")),
              v["lenguajes"].format(tema="aguara_light", paleta=rampa["claro"].replace(",", "%2C")),
-             "Lenguajes más usados", 411),
+             "Lenguajes más usados", tw, th),
         _par(v["racha"].format(modo="dark"), v["racha"].format(modo="light"),
-             "Racha de contribuciones", 411),
+             "Racha de contribuciones", tw, th),
         f'<a href="{v["spotify_perfil"]}">',
         _par(v["spotify"].format(modo="dark"), v["spotify"].format(modo="light"),
-             "Escuchando ahora en Spotify", 411),
+             "Escuchando ahora en Spotify", tw, th),
         "</a>", "",
         _par(v["snake"].format(modo="dark"), v["snake"].format(modo="light"),
-             "Snake de contribuciones recorriendo el pastizal"),
+             "Snake de contribuciones recorriendo el pastizal", sw, sh),
         "",
         b("cierre"), "",
         b("pastizal"), "",

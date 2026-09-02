@@ -408,6 +408,7 @@ def main():
 
     SALIDA.mkdir(parents=True, exist_ok=True)
     resumen = []
+    altos: dict[str, int] = {}
     for nombre, fn in BANDAS.items():
         for modo in ("oscuro", "claro"):
             C = TOKENS[modo]
@@ -420,14 +421,17 @@ def main():
             else:
                 fn(l, C, medidor)
             l.y += MARGEN_PIE
-            svg = envolver_svg(l, math.ceil(l.y), _fuentes_para(l), nombre)
+            alto = math.ceil(l.y)
+            altos[nombre] = alto
+            svg = envolver_svg(l, alto, _fuentes_para(l), nombre)
             sufijo = "dark" if modo == "oscuro" else "light"
             (SALIDA / f"{nombre}-{sufijo}.svg").write_text(svg, encoding="utf-8")
             if modo == "oscuro":
                 resumen.append((nombre, int(l.y), len(svg) // 1024))
 
     version = str(TOKENS.get("version_bandas", 1))
-    contenido_readme = armador.construir(TEXTO, version, TOKENS["oscuro"], TOKENS["claro"], TOKENS["rampa_lenguajes"])
+    contenido_readme = armador.construir(TEXTO, version, TOKENS["oscuro"], TOKENS["claro"],
+                                        TOKENS["rampa_lenguajes"], altos)
     (RAIZ.parent / "README.md").write_text(contenido_readme, encoding="utf-8", newline="")
     print(f"  README.md reescrito (bandas v{version})")
     print()
