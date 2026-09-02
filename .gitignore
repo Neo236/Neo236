@@ -1,1 +1,3 @@
+__pycache__/
+*.pyc
 render/tokens.json.bak
